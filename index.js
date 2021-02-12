@@ -3,6 +3,17 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 
+const pageTemplate = require('./src/page-template');
+const fs = require('fs');
+
+// write file Function:
+const writeFile = fileContent => {
+    fs.writeFile('./dist/index.html', fileContent, (err) => {
+        if (err) throw err;
+        console.log('The file has been saved!');
+    });
+};
+
 // create manager object:
 const createManager = managerData =>{
     const{name, id, email, officeNumber} = managerData;
@@ -153,7 +164,8 @@ const promptMenu = teamData =>{
                 promptMenu(teamData);
             })
         }else{
-            console.log(teamData);
+            var pageHtml = pageTemplate(teamData);
+            writeFile(pageHtml);
         }
     });
 }
@@ -164,5 +176,5 @@ promptManager()
 .then(managerObj =>{
     var teamData = {};
     teamData.managerData = managerObj;
-    return promptMenu(teamData)
+    promptMenu(teamData);
 })

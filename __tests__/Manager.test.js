@@ -25,6 +25,11 @@ test('get email from function getEmail()', ()=>{
     expect(manager.getEmail()).toBe('mail@mail.com');
 });
 
+test('get office number from function getOfficeNumber()', ()=>{
+    const manager = new Manager('Fazle', '101', 'mail@mail.com', 'Of101');
+    expect(manager.getOfficeNumber()).toBe('Of101');
+});
+
 test('get class name from function getRole()', ()=>{
     const manager = new Manager('Fazle', '101', 'mail@mail.com', 'Of101');
     expect(manager.getRole()).toBe('Manager');
