@@ -7,20 +7,35 @@
 This is a command-line application that accepts user input.
 
 WHEN prompted for my team members and their information
+
 THEN a HTML file is generated that displays a nicely formatted team roster based on user input
+
 WHEN a user clicks on an email address in the HTML
+
 THEN default email program opens and populates the TO field of the email with the address
+
 WHEN user clicks on the GitHub username
+
 THEN that GitHub profile opens in a new tab
+
 WHEN user starts the application
+
 THEN user is prompted to enter the team manager’s name, employee ID, email address, and office number
+
 WHEN user enters the team manager’s name, employee ID, email address, and office number
+
 THEN user is presented with a menu with the option to add an engineer or an intern or to finish building team
+
 WHEN user selects the engineer option
+
 THEN user is prompted to enter the engineer’s name, ID, email, and GitHub username, and taken back to the menu
+
 WHEN user selects the intern option
+
 THEN user is prompted to enter the intern’s name, ID, email, and school, and then taken back to the menu
+
 WHEN user decides to finish building team
+
 THEN user exit the application, and the HTML is generated
 
 ## DESCRIPTION:
